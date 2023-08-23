@@ -1,1 +1,13 @@
-<div><span>{{task?.title}}</span></div>
+<div class="sticky-note">
+  <div class="id">Task#{{task?.id}}</div>
+  <span class="title"><span class="hidden-title">Title: </span>{{task?.title}}</span>
+  <div class="description" *ngIf="task?.description">
+    <span class="hidden-description">Description: </span>
+    {{task?.description}}
+  </div>
+  <div class="due-date" *ngIf="task?.dueDate">
+    <span class="hidden-due-date">Due date: </span>
+    {{task?.dueDate}}
+  </div>
+</div>
+
