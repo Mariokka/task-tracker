@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import {TaskService} from "./task.service";
+import {TaskService} from "./service/task.service";
+import {Task } from "./model/task"
 
 @Component({
   selector: 'app-root',
@@ -7,7 +8,7 @@ import {TaskService} from "./task.service";
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  tasks: string[] = [];
+  tasks: Task[] = [];
   task: string | undefined;
   constructor(private taskService: TaskService) {
     this.tasks = this.taskService.getTasks();

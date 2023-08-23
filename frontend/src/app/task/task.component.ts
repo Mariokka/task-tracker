@@ -1,4 +1,5 @@
 import {Component, Input} from '@angular/core';
+import {Task } from "../model/task"
 
 @Component({
   selector: 'app-task',
@@ -7,5 +8,5 @@ import {Component, Input} from '@angular/core';
 })
 export class TaskComponent {
   @Input()
-  task: string | undefined;
+  task: Task | undefined;
 }
