@@ -5,8 +5,8 @@ export class Task {
   id: number | undefined;
   dueDate: string | undefined;
 
-  constructor(description: string) {
-    this.description = description;
+  constructor(title: string) {
+    this.title = title;
     this.id = Task.counter;
     Task.counter++;
   }
