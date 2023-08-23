@@ -1,2 +1,15 @@
 <app-header></app-header>
-<app-create-form></app-create-form>
+<div class="container">
+  <form id="create-form" class="form-inline">
+    <input id="input-field" class="form-control " type="search" placeholder="Feed the dog" aria-label="Search"
+           name="create-a-task" [(ngModel)]="task">
+    <button id="create-button" class="btn btn-light btn-outline-secondary" type="submit" (click)="createTask()">
+      Create a task
+    </button>
+  </form>
+  <div>
+    <div id="all-tasks" *ngFor="let task of tasks">
+      <app-task class="col-lg-4 col-md-6 col-sm-6" [task]="task"></app-task>
+    </div>
+  </div>
+</div>

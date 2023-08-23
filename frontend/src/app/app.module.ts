@@ -5,17 +5,19 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import {NgbModule} from "@ng-bootstrap/ng-bootstrap";
 import { HeaderComponent } from './header/header.component';
-import { CreateFormComponent } from './create-form/create-form.component';
+import {FormsModule} from "@angular/forms";
+import { TaskComponent } from './task/task.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    CreateFormComponent
+    TaskComponent,
   ],
   imports: [
     BrowserModule,
     NgbModule,
+    FormsModule,
     AppRoutingModule
   ],
   providers: [],

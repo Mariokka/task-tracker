@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {NgbModal} from "@ng-bootstrap/ng-bootstrap";
+import {TaskService} from "./task.service";
 
 @Component({
   selector: 'app-root',
@@ -7,10 +7,15 @@ import {NgbModal} from "@ng-bootstrap/ng-bootstrap";
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  constructor(private modalService: NgbModal) {
+  tasks: string[] = [];
+  task: string | undefined;
+  constructor(private taskService: TaskService) {
+    this.tasks = this.taskService.getTasks();
   }
 
-  public open(modal: any): void {
-    this.modalService.open(modal);
+  createTask() {
+    if (this.task != null) {
+      this.taskService.saveTask(this.task);
+    }
   }
 }

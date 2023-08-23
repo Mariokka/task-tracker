@@ -1,0 +1,24 @@
+span {
+  font-family: 'Reenie Beanie';
+  font-size: 2rem;
+  font-weight: normal;
+}
+ div {
+   text-decoration:none;
+
+   color:#000;
+
+   background:#ffc;
+
+   display:block;
+
+   height:10em;
+
+   width:10em;
+
+   padding:1em;
+
+   margin-right:1em;
+   margin-top: 1em;
+
+ }
