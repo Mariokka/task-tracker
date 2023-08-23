@@ -17,7 +17,7 @@
    transition: transform .15s linear;
  }
 
-.id, .hidden-title, .hidden-description, .hidden-due-date {
+.id, .hidden-title, .description, .due-date, .hidden-description, .hidden-due-date {
   display: none;
 }
 
@@ -29,13 +29,47 @@
 .sticky-note:hover .id{
   display: block;
   font-family: 'Reenie Beanie';
-  font-size: 2rem;
   font-weight: normal;
+  font-size: 1.5rem;
 }
 
-.sticky-note:hover .hidden-title, .hidden-description, .hidden-due-date{
+.sticky-note:hover .title{
+  font-family: 'Reenie Beanie';
+  font-weight: normal;
+  font-size: 1.5rem;
+}
+
+.sticky-note:hover .hidden-title {
   display: inline;
   font-family: 'Reenie Beanie';
-  font-size: 2rem;
   font-weight: normal;
+  font-size: 1.5rem;
+}
+
+.sticky-note:hover .description {
+  display: block;
+  font-family: 'Reenie Beanie';
+  font-weight: normal;
+  font-size: 1.5rem;
+}
+
+.sticky-note:hover .due-date {
+  display: block;
+  font-family: 'Reenie Beanie';
+  font-weight: normal;
+  font-size: 1.5rem;
+}
+
+.sticky-note:hover .hidden-description {
+  display: inline;
+  font-family: 'Reenie Beanie';
+  font-weight: normal;
+  font-size: 1.5rem;
+}
+
+.sticky-note:hover .hidden-due-date{
+  display: inline;
+  font-family: 'Reenie Beanie';
+  font-weight: normal;
+  font-size: 1.5rem;
 }
