@@ -9,4 +9,6 @@ import {Task } from "../model/task"
 export class TaskComponent {
   @Input()
   task: Task | undefined;
+
+  canEdit: boolean = false;
 }

@@ -1,5 +1,30 @@
+<div class="our-modal" *ngIf="canEdit">
+  <div class="our-inner-modal">
+  <div class="display-flex">
+    <span>Title: </span>
+    <input  [(ngModel)]="task!.title" type="text" class="form-control"/>
+  </div>
+    <div class="display-flex">
+      <span>Description: </span>
+      <input  [(ngModel)]="task!.description" type="text" class="form-control"/>
+    </div>
+    <div class="display-flex">
+      <span>Due date: </span>
+      <input  [(ngModel)]="task!.dueDate" type="text" class="form-control"/>
+    </div>
+    <div>
+      <button id="save-button" class="btn btn-light btn-outline-secondary" type="submit" (click)="canEdit=!canEdit">
+      Save
+    </button>
+    </div>
+  </div>
+</div>
+
 <div class="sticky-note">
-  <div class="id">Task#{{task?.id}}</div>
+  <div class="first-line">
+    <span class="id">Task#{{task?.id}}</span>
+    <i class="bi bi-pencil-square" (click)="canEdit=!canEdit"></i>
+  </div>
   <span class="title"><span class="hidden-title">Title: </span>{{task?.title}}</span>
   <span class="description" *ngIf="task?.description">
     <span class="hidden-description" *ngIf="task?.description">Description: </span>
@@ -10,4 +35,3 @@
     {{task?.dueDate}}
   </span>
 </div>
-
