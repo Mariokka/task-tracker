@@ -22,12 +22,14 @@
   transform:rotate(4deg);
   position:relative;
   top:5px;
+  background:#e73213;
 }
 
 #all-tasks:nth-child(3n) app-task div{
   transform:rotate(-3deg);
   position:relative;
   top:-5px;
+  background:#9dbeb7;
 }
 
 #all-tasks:nth-child(5n) app-task div{
