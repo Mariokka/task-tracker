@@ -17,3 +17,21 @@
 #all-tasks {
   display: inline-block;
 }
+
+#all-tasks:nth-child(even) app-task div{
+  transform:rotate(4deg);
+  position:relative;
+  top:5px;
+}
+
+#all-tasks:nth-child(3n) app-task div{
+  transform:rotate(-3deg);
+  position:relative;
+  top:-5px;
+}
+
+#all-tasks:nth-child(5n) app-task div{
+  transform:rotate(5deg);
+  position:relative;
+  top:-10px;
+}
