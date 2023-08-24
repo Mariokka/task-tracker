@@ -17,20 +17,30 @@ describe('AppComponent', () => {
     fixture.detectChanges();
   });
 
+  const clickSaveButton = () => {
+    const button = fixture.nativeElement.querySelector('#create-button');
+    button.click();
+    fixture.detectChanges();
+  };
+
+  const givenTask = (task: string) => {
+    component.task = task;
+  };
+
+  const expectPageToContainThisNumberOfTasks = (numberOfTasks: number) => {
+    const tasks = fixture.nativeElement.querySelector('app-task');
+    expect(tasks).toHaveSize(numberOfTasks);
+  }
+
   it('creates the app', () => {
     expect(component).toBeTruthy();
   });
 
-  // it(`should have as title 'frontend'`, () => {
-  //   const fixture = TestBed.createComponent(AppComponent);
-  //   const app = fixture.componentInstance;
-  //   expect(app.title).toEqual('frontend');
-  // });
-  //
-  // it('should render title', () => {
-  //   const fixture = TestBed.createComponent(AppComponent);
-  //   fixture.detectChanges();
-  //   const compiled = fixture.nativeElement as HTMLElement;
-  //   expect(compiled.querySelector('.content span')?.textContent).toContain('frontend app is running!');
-  // });
+  it(`creates a task after clicking on create button`, () => {
+    givenTask("feed the dog");
+
+    clickSaveButton();
+
+    expectPageToContainThisNumberOfTasks(1);
+  });
 });
