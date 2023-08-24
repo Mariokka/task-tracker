@@ -11,7 +11,7 @@ export class AppComponent {
   tasks: Task[] = [];
   task: string | undefined;
   constructor(private taskService: TaskService) {
-    this.tasks = this.taskService.getTasks();
+    this.taskService.getTasks().subscribe(tasks => this.tasks = tasks);
   }
 
   createTask() {
