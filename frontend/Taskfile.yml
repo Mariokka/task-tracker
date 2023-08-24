@@ -4,4 +4,8 @@ silent: true
 
 tasks:
   serve:
-    cmds: [ng serve --open]
+    cmds:
+      - task: kill
+      - ng serve --open
+  kill:
+    cmds: [./kill.sh]
