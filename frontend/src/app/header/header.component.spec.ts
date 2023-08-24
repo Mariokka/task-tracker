@@ -18,4 +18,8 @@ describe('HeaderComponent', () => {
   it('creates', () => {
     expect(component).toBeTruthy();
   });
+
+  // it(`displays correct title`, () => {
+  //   expect(component.toolName).toEqual('Manage your tasks');
+  // });
 });
