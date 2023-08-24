@@ -1,6 +1,6 @@
 import { TestBed } from '@angular/core/testing';
 
-import { TaskService } from './service/task.service';
+import { TaskService } from './task.service';
 
 describe('TaskService', () => {
   let service: TaskService;
@@ -10,7 +10,7 @@ describe('TaskService', () => {
     service = TestBed.inject(TaskService);
   });
 
-  it('should be created', () => {
+  it('creates', () => {
     expect(service).toBeTruthy();
   });
 });

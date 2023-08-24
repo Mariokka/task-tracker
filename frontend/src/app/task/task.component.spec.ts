@@ -15,7 +15,7 @@ describe('TaskComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it('creates', () => {
     expect(component).toBeTruthy();
   });
 });
