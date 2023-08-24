@@ -1,6 +1,8 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { HeaderComponent } from './header.component';
+import {AppModule} from "../app.module";
+import {RouterTestingModule} from "@angular/router/testing";
 
 describe('HeaderComponent', () => {
   let component: HeaderComponent;
@@ -8,6 +10,7 @@ describe('HeaderComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
+      imports: [AppModule],
       declarations: [HeaderComponent]
     });
     fixture = TestBed.createComponent(HeaderComponent);
@@ -19,7 +22,9 @@ describe('HeaderComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  // it(`displays correct title`, () => {
-  //   expect(component.toolName).toEqual('Manage your tasks');
-  // });
+  it(`displays correct title`, () => {
+    const name = fixture.nativeElement.querySelector('h1').textContent;
+
+    expect(name).toEqual("Manage your tasks");
+  });
 });
