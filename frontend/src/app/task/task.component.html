@@ -1,6 +1,8 @@
 <div class="our-modal" *ngIf="canEdit">
   <div class="our-inner-modal">
-    <div class="icon-parent"><i class="bi bi-x-lg" (click)="canEdit=!canEdit"></i></div>
+    <div class="icon-parent">
+      <i class="bi bi-x-lg" (click)="canEdit=!canEdit"></i>
+    </div>
   <div class="display-flex">
     <span>Title: </span>
     <input  [(ngModel)]="task!.title" type="text" class="form-control"/>
@@ -26,7 +28,10 @@
     <span class="id">Task#{{task?.id}}</span>
     <i class="bi bi-pencil-square" (click)="canEdit=!canEdit"></i>
   </div>
-  <span class="title"><span class="hidden-title">Title: </span>{{task?.title}}</span>
+  <span class="title">
+    <span class="hidden-title">Title: </span>
+    {{task?.title}}
+  </span>
   <span class="description" *ngIf="task?.description">
     <span class="hidden-description" *ngIf="task?.description">Description: </span>
     {{task?.description}}
