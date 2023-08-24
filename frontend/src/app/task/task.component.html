@@ -1,5 +1,6 @@
 <div class="our-modal" *ngIf="canEdit">
   <div class="our-inner-modal">
+    <div class="icon-parent"><i class="bi bi-x-lg" (click)="canEdit=!canEdit"></i></div>
   <div class="display-flex">
     <span>Title: </span>
     <input  [(ngModel)]="task!.title" type="text" class="form-control"/>

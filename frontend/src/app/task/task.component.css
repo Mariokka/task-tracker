@@ -88,6 +88,10 @@
   color: #A9A9A9;
 }
 
+bi-x-lg:hover {
+  color: #A9A9A9;
+}
+
 .our-modal {
   position: fixed;
   z-index: 1;
@@ -117,4 +121,9 @@
 .our-inner-modal span {
   margin-right: 5px;
   width: 125px;
+}
+
+.icon-parent {
+  display: flex;
+  justify-content: right;
 }
